@@ -4,6 +4,8 @@
   "description": "My Progress on a Food Ordering App From Namaste React Course By Akshay Saini",
   "main": "App.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "author": "Jaskaran Singh Nanda",
