@@ -21,10 +21,17 @@ This repository is to document my progress on the food ordering app project from
 - - Address, Contact info.
  -->
 
-<!-- - Two Types of export import
+<!--* -Two Types of export import
 
 - 1 export default CDN_URL
 - import CDN_URL from path
 
 - 2 export const CDN_URL = {...}
 - import {CDN_URL} from path -->
+
+# React Hooks
+
+(Normal JS utility functions)
+
+- useState()
+- useEffect()
