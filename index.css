@@ -58,6 +58,10 @@
   height: 120px;
   object-fit: cover;
 }
+.filter {
+  display: flex;
+  align-items: center;
+}
 .filter-btn {
   margin: 10px;
   margin-top: 20px;
@@ -84,4 +88,15 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 70px;
+}
+.login-button {
+  background-color: white;
+  padding: 0px 20px;
+  cursor: pointer;
+  border: 1px solid white;
+  font-weight: 500;
+}
+.login-button:hover {
+  border: 1px solid #cecece;
+  border-radius: 10px;
 }
