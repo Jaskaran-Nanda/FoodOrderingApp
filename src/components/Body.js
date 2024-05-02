@@ -27,10 +27,6 @@ const Body = () => {
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
-  //
-  /* if (listOfRestaurants.length === 0) {
-    return <h1>Loading.....</h1>;
-  } */
   // * Conditional Rendering
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
