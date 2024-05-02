@@ -17,7 +17,7 @@ class About extends Component {
       <div>
         <h1>About Us!</h1>
         <h2>This is Namaste Food Delivery App!</h2>
-        <UserClass name={"Jaskaran Nanda (class)"} location={"Dubai (class)"} />
+        <User />
       </div>
     );
   }
