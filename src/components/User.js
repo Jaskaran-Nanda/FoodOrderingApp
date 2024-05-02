@@ -11,10 +11,9 @@ const User = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  if (userInfo === null || undefined) {
+  if (userInfo == null || undefined) {
     return <Shimmer />;
   }
-  console.log(userInfo);
   const { name, avatar_url } = userInfo || 0;
   return (
     <div className="user-card">
