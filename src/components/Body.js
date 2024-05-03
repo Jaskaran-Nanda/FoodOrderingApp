@@ -44,18 +44,18 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
-        <div className="search">
+      <div className="filter flex items-center">
+        <div className="search m-4 p-2">
           <input
             type="text"
-            className="search-box"
+            className="search-box border border-solid border-gray-200 p-2 focus:outline-none focus:border-gray-400 rounded-xl"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           ></input>
           <button
-            className="search-button"
+            className="search-button bg-green-200 px-4 py-2 m-2 rounded-lg border-gray-300 border border-solid focus:border-gray-400"
             onClick={() => {
               //filter the restaurant cards and update the UI
               //searchText
@@ -71,19 +71,21 @@ const Body = () => {
             Search
           </button>
         </div>
-        <button
-          className="filter-btn"
-          onClick={() => {
-            const filteredList = filteredListOfRestaurants.filter(
-              (res) => res.info.avgRating > 4.25
-            );
-            setFilteredListOfRestaurants(filteredList);
-          }}
-        >
-          Top Rated Restaurants
-        </button>
+        <div>
+          <button
+            className="filter-btn px-4 py-2 bg-gray-200 rounded-lg"
+            onClick={() => {
+              const filteredList = filteredListOfRestaurants.filter(
+                (res) => res.info.avgRating > 4.25
+              );
+              setFilteredListOfRestaurants(filteredList);
+            }}
+          >
+            Top Rated Restaurants{" "}
+          </button>
+        </div>
       </div>
-      <div className="res-container">
+      <div className="res-container flex flex-wrap justify-around">
         {filteredListOfRestaurants.map((restaurant) => (
           <Link
             to={"/restaurants/" + restaurant.info.id}

@@ -5,8 +5,7 @@ import { Component } from "react";
 const About = () => {
   return (
     <div>
-      <h1>About Us!</h1>
-      <h2>This is Namaste Food Delivery App!</h2>
+      <h1 className="p-8 font-bold text-3xl">Developed by: </h1>
       <User />
     </div>
   );

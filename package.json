@@ -2,7 +2,6 @@
   "name": "foodorderingapp",
   "version": "1.0.0",
   "description": "My Progress on a Food Ordering App From Namaste React Course By Akshay Saini",
-  "main": "App.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
@@ -12,7 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.12.0",
-    "process": "^0.11.10"
+    "postcss": "^8.4.38",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.3"
   },
   "dependencies": {
     "react": "^18.2.0",

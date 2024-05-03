@@ -9,28 +9,30 @@ const Header = () => {
 
   const [btnName, setBtnName] = useState("Login");
   return (
-    <div className="header">
-      <div className="logo">
-        <img src={myImage} id="logo-image" />
+    <div className="flex justify-between shadow-md mb-2 items-center ">
+      <div className="logo w-32 m-4">
+        <img src={myImage} className="w-32" />
       </div>
-      <div className="nav-items">
-        <ul>
-          <li>Online Status: {onlineStatus ? "🟢" : "🔴"}</li>
-          <li>
+      <div className="nav-items items-center">
+        <ul className="flex  m-4 ">
+          <li className="p-4">Online Status: {onlineStatus ? "🟢" : "🔴"}</li>
+          <li className="p-4 border-white border-2 rounded-xl hover:border-gray-200">
             <Link to={"/"}>Home</Link>
           </li>
-          <li>
+          <li className="p-4 border-white border-2 rounded-xl hover:border-gray-200">
             <Link to={"/about"}>About Us</Link>
           </li>
-          <li>
+          <li className="p-4 border-white border-2 rounded-xl hover:border-gray-200">
             <Link to={"/contact"}>Contact Us</Link>
           </li>
-          <li>
+          <li className="p-4 border-white border-2 rounded-xl hover:border-gray-200">
             <Link to={"/grocery"}>Groceries</Link>
           </li>
-          <li>Cart</li>
+          <li className="p-4 border-white border-2 rounded-xl hover:border-gray-200">
+            Cart
+          </li>
           <button
-            className="login-button"
+            className="login-button p-4 border-zinc-900 border-2 rounded-xl hover:border-gray-200"
             onClick={() => {
               btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
             }}
