@@ -37,7 +37,7 @@ const RestaurantMenu = () => {
         <h2 className="mt-6 text-3xl">Menu</h2>
       </div>
       {categories.map((c) => (
-        <RestaurantCategory data={c?.card?.card} />
+        <RestaurantCategory key={c?.card?.card?.title} data={c?.card?.card} />
       ))}
     </div>
   );
