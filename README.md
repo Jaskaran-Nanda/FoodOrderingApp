@@ -55,3 +55,29 @@ This repository is to document my progress on the food ordering app project from
 
 - useState()
 - useEffect()
+
+<ul>
+        {itemCards.map((item) => (
+          <div
+            key={item.card.info.id}
+            className="flex p-8 justify-between w-full"
+          >
+            <div className="p-4 w-[65%]">
+              <h2 className="font-bold">
+                {item.card.info.name} -{" "}
+                {item.card.info.defaultPrice / 100 ||
+                  item.card.info.price / 100}{" "}
+                ₹
+              </h2>
+              <h4>{item.card.info.description}</h4>
+            </div>
+            <div className="">
+              <img
+                alt="res-logo"
+                src={CDN_URL + item.card.info.imageId}
+                className="h-[150px] w-[200px] object-cover"
+              />
+            </div>
+          </div>
+        ))}
+      </ul>

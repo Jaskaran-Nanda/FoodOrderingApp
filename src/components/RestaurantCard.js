@@ -20,4 +20,18 @@ const RestaurantCard = (props) => {
     </div>
   );
 };
+//Higher order component which will enhance restaurant card with veg tag
+// input - restaurantCard =>> output - restaurantCardVeg
+export const withVegLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label className="absolute bg-green-600 text-white m-2 ml-4 mt-0 p-2 px-4 rounded-br-lg rounded-tl-lg shadow-green-700 shadow-sm">
+          Veg
+        </label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
+};
 export default RestaurantCard;
