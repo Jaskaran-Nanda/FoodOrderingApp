@@ -1,8 +1,9 @@
 import RestaurantCard, { withVegLabel } from "./RestaurantCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   // State Variable - Super Powerfull Variable - for that we use Hooks
@@ -41,7 +42,7 @@ const Body = () => {
         try again! 💙{" "}
       </h1>
     );
-
+  const { setUserName, loggedInUser } = useContext(UserContext);
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
@@ -85,6 +86,13 @@ const Body = () => {
           >
             Top Rated Restaurants{" "}
           </button>
+          <input
+            className="filter-btn px-4 py-2 bg-gray-200 rounded-lg mx-2"
+            value={loggedInUser}
+            onChange={(e) => {
+              setUserName(e.target.value);
+            }}
+          ></input>
         </div>
       </div>
       <div className="res-container flex flex-wrap justify-around">
