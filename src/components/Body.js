@@ -12,7 +12,7 @@ const Body = () => {
     []
   );
   const RestaurantCardVeg = withVegLabel(RestaurantCard);
-  console.log(listOfRestaurants);
+
   // Use Effect Hook
   useEffect(() => {
     fetchData();

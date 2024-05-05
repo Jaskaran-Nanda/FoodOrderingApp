@@ -1,12 +1,13 @@
 import { useState } from "react";
 import myImage from "../utils/logoipsum-331.svg";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
   const onlineStatus = useOnlineStatus();
-
+  const data = useContext(UserContext);
   const [btnName, setBtnName] = useState("Login");
   return (
     <div className="flex justify-between shadow-md mb-2 items-center ">
@@ -39,6 +40,7 @@ const Header = () => {
           >
             {btnName}
           </button>
+          <li className="p-4 font-bold">{data.loggedInUser}</li>
         </ul>
       </div>
     </div>
