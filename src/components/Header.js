@@ -12,7 +12,6 @@ const Header = () => {
   const [btnName, setBtnName] = useState("Login");
 
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems);
   return (
     <div className="flex justify-between shadow-md mb-2 items-center ">
       <div className="logo w-32 m-4">
