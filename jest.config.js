@@ -193,6 +193,10 @@ const config = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
+  transform: {
+    "^.+\\.(js|jsx)$": "babel-jest",
+    "^.+\\.svg$": "<rootDir>/svgTransform.js",
+  },
 };
 
 module.exports = config;
