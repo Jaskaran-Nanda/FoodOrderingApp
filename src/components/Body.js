@@ -50,6 +50,7 @@ const Body = () => {
       <div className="filter flex items-center">
         <div className="search m-4 p-2">
           <input
+            data-testid="searchInput"
             type="text"
             className="search-box border border-solid border-gray-200 p-2 focus:outline-none focus:border-gray-400 rounded-xl"
             value={searchText}
@@ -79,7 +80,7 @@ const Body = () => {
             className="filter-btn px-4 py-2 bg-gray-200 rounded-lg"
             onClick={() => {
               const filteredList = filteredListOfRestaurants.filter(
-                (res) => res.info.avgRating > 4.25
+                (res) => res.info.avgRating > 4.3
               );
               setFilteredListOfRestaurants(filteredList);
             }}

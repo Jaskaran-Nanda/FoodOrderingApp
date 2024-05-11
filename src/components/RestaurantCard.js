@@ -8,7 +8,10 @@ const RestaurantCard = (props) => {
   const data = useContext(UserContext);
   const { slaString } = resData?.info.sla;
   return (
-    <div className="w-[250px] h-[380px] flex-col m-4 border-gray-200 border-solid border rounded-lg justify-around ">
+    <div
+      data-testid="resCard"
+      className="w-[250px] h-[380px] flex-col m-4 border-gray-200 border-solid border rounded-lg justify-around "
+    >
       <img
         alt="res-logo"
         src={CDN_URL + cloudinaryImageId}
